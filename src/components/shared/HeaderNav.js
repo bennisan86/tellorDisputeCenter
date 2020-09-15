@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
 import { Layout } from 'antd';
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
@@ -23,6 +22,7 @@ const HeaderNav = () => {
             <img alt="tellor-logo" src={logo} />
             <span>dispute center</span>
           </Link>
+          <p>Legacy Contract V1 Data</p>
         </div>
         <div className="Header__Nav">
           <ModeSwitcher setLogo={setLogo} />

@@ -3,7 +3,6 @@ import { Table } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import MinerValues from './MinerValues';
 import Lottie from 'react-lottie';
-import animationData from '../../assets/Tellor__Loader.json';
 import { ModeContext } from '../../contexts/Store';
 
 const MiningEventsTable = ({ events, pagination, current }) => {
