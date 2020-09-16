@@ -100,7 +100,7 @@ export const GET_LATEST_DISPUTES = gql`
 
 export const GET_ALL_DISPUTES = gql`
   query {
-    disputes(first: 10, orderBy: timestamp, orderDirection: desc) {
+    disputes(first: 100, orderBy: timestamp, orderDirection: desc) {
       ${disputeFields}
     }
   }

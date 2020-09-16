@@ -6,9 +6,9 @@ const AllDisputes = ({ disputes }) => {
   return (
     <>
       <div className="TableHeader">
-        <h2>Recent Disputes</h2>
+        <h2>All Disputes</h2>
       </div>
-      <DisputesTable pagination={false} disputes={disputes} />
+      <DisputesTable pagination={true} disputes={disputes} />
     </>
   );
 };
