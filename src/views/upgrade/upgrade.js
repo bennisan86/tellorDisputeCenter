@@ -7,7 +7,7 @@ const Upgrade = () => {
       <div className="Hero">
         <div className="View">
           <h1 style={{ fontSize: 60, alignContent: 'center' }}>
-            Tellor 2.6 Proposal Coming Soon!
+            Tellor 2.6 Proposal!
           </h1>
           <p>
             TLDR: Fix the difficulty adjustment to be based 4th slot, allowing
@@ -15,10 +15,14 @@ const Upgrade = () => {
             always 1, making it a proof-of-stake slot.
           </p>
           <div style={{ margin: 20 }}>
-            <VoteForm dispute={{ disputeId: 9999 }} />
+            <VoteForm dispute={{ disputeId: 54 }} />
           </div>
           <p>
-            <a href={'https://github.com/tellor-io/TIPs/blob/main/TIPs'}>
+            <a
+              href={
+                'https://github.com/tellor-io/TIPs/blob/main/TIPs/TIP-6%20Tellor2.6.md'
+              }
+            >
               {' '}
               See Full Proposal{' '}
             </a>
