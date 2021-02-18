@@ -65,7 +65,8 @@ const Migration = () => {
                   My TRB is on a third party wallet (e.g. pool, ...).
               </Radio>
           </Radio.Group>
-      </div> */}
+      </div>
+      */}
 
       <div className="View Step">
         <h2><span className="nr">1.</span> Connect with the Metamask</h2>
