@@ -3,15 +3,24 @@ import { Collapse, Button, Radio } from 'antd';
 import { UserContext } from 'contexts/User';
 import { truncateAddr } from 'utils/helpers';
 import { Web3SignIn } from 'components/shared/Web3SignIn';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const { Panel } = Collapse;
 
 const Migration = () => {
   const [userOption,setUserOption] = useState("");
   const [migrationDone,toggleMigrationDone] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [contractaddress,setContractaddress] = useState("ADDRESS");
   const [currentUser] = useContext(UserContext);
   const onChange = (e) => {
     setUserOption(e.target.value);
+  }
+  const clickedCopy = () => {
+    setShowFeedback(true);
+    setTimeout(function() {
+      setShowFeedback(false);
+    }, 2000);
   }
   return (
     <div className="Migration">
@@ -35,6 +44,22 @@ const Migration = () => {
                 <li>After confirming the transaction in MetaMask, you can follow its process on Etherscan. When this transaction has reached sufficient confirmations, your new balance will be visible under "New balance".</li>
                 <li>Your tokens are now successfully migrated to the new contract!</li>
               </ul>
+              <br />
+              <br />
+              <p>In order for your new TRB balance to show up in your Metamask assets you may need to add a new token using this address:</p>
+              <div class="leftrow">
+                <p>{contractaddress}</p>
+                <CopyToClipboard text={contractaddress}
+                  onCopy={() => clickedCopy(true)}>
+                  <span className="copier">copy</span>
+                </CopyToClipboard>
+                {showFeedback?
+                  <p>copied!</p>
+                :
+                null }
+              </div>
+            <p>(Link: <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489011-How-to-manage-ERC-20-Tokens">How to add new token to metamask.</a>)</p>
+
             </Panel>
           </Collapse>
 
