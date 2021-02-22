@@ -127,9 +127,7 @@ const Migrate = () => {
         */
        
 
-
-
-
+<>
     <div className="Migration">
       <div className="Intro">
         <div className="View">
@@ -208,31 +206,40 @@ const Migrate = () => {
           <Web3SignIn />
       </div>
       <div className="Line"></div>
-      <div className="View Step">
+      <div className={currentUser ? "View Step fullop" : "View Step halfop"}>
         <h2><span className="nr">2.</span> Migrate your TRB</h2>
         <div className="Balances">
           <div className="Balance">
-            <p className={migrationDone ? "halfop" : "fullop"}>Current balance:</p>
-            <h1 className={migrationDone ? "halfop" : "fullop"}>800 TRB</h1>
+            <p className={migrated ? "halfop" : "fullop"}>Current balance:</p>
+            <h1 className={migrated ? "halfop" : "fullop"}>{fromWei(userBalance)} TRB</h1>
           </div>
           <div className="Balance">
             <p></p>
-            <h1 className={migrationDone ? "halfop" : "fullop"}>&#62;</h1>
+            <h1 className={migrated ? "halfop" : "fullop"}>&#62;</h1>
           </div>
           <div className="Balance">
             <p>New balance:</p>
-            <h1 onClick={() =>toggleMigrationDone(!migrationDone)}>0 TRB</h1>
+            <h1 onClick={() =>toggleMigrationDone(!migrated)}>{migrated ? fromWei(userBalance) : "0"} TRB</h1>
           </div>
         </div>
-        {migrationDone ?
+        {migrated ?
         null
         :
-        <Button size="large" type="default">
+        <Button
+            key="migration"
+            size="large"
+            type="default"
+            onClick={() => handleSubmit()}
+            disabled={cantMigrate}>
           Migrate TRB
         </Button>
         }
       </div>
-      {migrationDone ?
+        <div className="View">
+        {error && <p className="ErrorMsg">Error Submitting Transaction:{error}</p>}
+        {currentTx && <EtherscanLink txHash={currentTx} />}
+        </div>
+      {migrated ?
       <div className="Success">
         <div className="View">
           <h1>You successfully migrated your TRB!</h1>
@@ -242,7 +249,7 @@ const Migrate = () => {
       null }
     </div>
 
-
+</>
 
 
     );
