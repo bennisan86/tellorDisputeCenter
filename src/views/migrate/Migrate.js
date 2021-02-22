@@ -134,7 +134,7 @@ const Migrate = () => {
           <h1>On this page, we’ll assist you in migrating your Tributes (TRB) to the new version of the contract.</h1>
           <Collapse>
               <Panel header="Why do I need to migrate my TRB?" key="1">
-                <p>Explanation of what happend here</p>
+                <p>The Tellor system experienced a major bug on monday 2/15 while deploying the upgrade to v2.6.1.  This froze the network including the TRB token, however no funds were lost.  The solution was to redeploy Tellor and to do so requires a token swap.  This migration page will help you through this simple process.</p>
             </Panel>
           </Collapse>
 
@@ -142,10 +142,10 @@ const Migrate = () => {
               <Panel header="What are the steps I need to take?" key="2">
               <ul>
                 <li>In Metamask, choose the account containing the TRB you want to migrate.</li>
-                <li>Click the "Connect"-button in step 1.</li>
-                <li>If you are connected, your pubkey will appear in step 1. Also, in step 2 your balance will now be visible under "Current Balance", and the "Migrate TRB"-button will now be enabled.</li>
-                <li>Click the "Migrate TRB"-button in step 2.</li>
-                <li>Upon clicking the "Migrate TRB"-button, the MetaMask modal will ask you to confirm this transaction. Make sure you have ETH to pay the gas of this transaction!</li>
+                <li>Click the "Connect" button in step 1.</li>
+                <li>If you are connected, your pubkey will appear in step 1. Also, in step 2 your balance will now be visible under "Current Balance", and the "Migrate TRB" button will now be enabled.</li>
+                <li>Click the "Migrate TRB" button in step 2.</li>
+                <li>Upon clicking the "Migrate TRB" button, the MetaMask modal will ask you to confirm this transaction. Make sure you have ETH to pay the gas of this transaction!</li>
                 <li>After confirming the transaction in MetaMask, you can follow its process on Etherscan. When this transaction has reached sufficient confirmations, your new balance will be visible under "New balance".</li>
                 <li>Your tokens are now successfully migrated to the new contract!</li>
               </ul>

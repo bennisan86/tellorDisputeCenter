@@ -484,19 +484,20 @@ tr.ant-table-expanded-row:hover > td {
 .Migration .Intro {
   box-sizing: border-box;
   padding: 70px 0 0 0;
-  background-color: black;
+  // background-color: black;
+  background-color: var(--background);
 }
 
 .Migration .View {
   padding-bottom: 50px;
 }
 .Migration .Line {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   margin: 0 0 0 0;
 }
 
 .Migration h1, .Migration p, .Migration h2, .Migration li {
-  color: white;
+  // color: white;
 }
 
 .Migration h1 {
@@ -524,7 +525,7 @@ tr.ant-table-expanded-row:hover > td {
 .Migration .ant-collapse, .Migration .ant-collapse-content {
   background-color: transparent;
   border: none;
-  color: white;
+  // color: white;
 }
 
 .Migration .ant-collapse > .ant-collapse-item {
@@ -575,7 +576,7 @@ tr.ant-table-expanded-row:hover > td {
 
 .Migration .connected span {
   font-weight: bold;
-  color: white;
+  // color: white;
 }
 
 .Migration .Balances {
@@ -615,11 +616,11 @@ tr.ant-table-expanded-row:hover > td {
 }
 
 .Success {
-  background-color: var(--color-heading) !important;
+  background-color: var(--background);
   box-sizing: border-box;
   padding: 50px 0 25px 0;
   h1 {
-    color: black;
+    // color: black;
     font-weight: normal;
   }
 }
